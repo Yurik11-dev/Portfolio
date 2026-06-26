@@ -1,0 +1,33 @@
+:root {
+    --bg: #131313;
+    --bg-secondary: #1c1c1c;
+    --text: #ededed;
+    --text-muted: #999999;
+    --accent: #b5533c;
+    --border: #292929;
+}
+
+[data-theme="light"] {
+    --bg: #fafafa;
+    --bg-secondary: #f0f0f0;
+    --text: #1a1a1a;
+    --text-muted: #6b6b6b;
+    --accent: #a13f2a;
+    --border: #dcdcdc;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+pre,
+code {
+    font-family: 'JetBrains Mono', monospace;
+}
