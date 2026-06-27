@@ -9,42 +9,55 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <title>Yuri - Full Stack Developer</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
 </head>
 
 <body>
     <header>
-        <p>Yuri</p>
-        <button aria-label="Abrir menu de navegação">
+        <p class="logo">Portfolio - Yuri</p>
+        <div class="header-actions">
+            <button class="theme-toggle" aria-label="Alternar tema claro/escuro">
+                <svg class="icon-sun lucide lucide-sun-icon lucide-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+                <svg class="icon-moon lucide lucide-moon-icon lucide-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+            
+        </button>
+        <button class="menu-toggle" aria-label="Abrir menu de navegação">
             <span>☰</span>
         </button>
-        <button aria-label="Alternar tema claro/escuro">
-            <img src="assets/icons/sun.svg" alt="">
-            <img src="assets/icons/moon.svg" alt="">
-        </button>
-        <nav>
-            <ul>
+        </div>
+        
+        <nav class="nav">
+            <ul class="nav-list">
                 <li>
-                    <a href="#sobre">Sobre</a>
+                    <a href="sobre.html">Sobre</a>
                 </li>
                 <li>
-                    <a href="#projetos">Projetos</a>
+                    <a href="projetos.html">Projetos</a>
                 </li>
                 <li>
-                    <a href="#certificados">Certificados</a>
+                    <a href="certificados.html">Certificados</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
+        <section class="hero">
             <div>
-                <h1>Yuri Kauã</h1>
-                <p>Dev Full Stack</p>
-                <img src="assets/images/foto.jpeg" alt="Foto de Yuri, desenvolvedor full stack">
+                <h1 class="name">Yuri Kauã</h1>
+                <p class="stack">Dev Full Stack</p>
+                <img class="foto" src="assets/images/foto.jpeg" alt="Foto de Yuri, desenvolvedor full stack">
+                <p class="frase">"Amante por tecnologia, sempre em busca de aprender cada vez mais"</p>
             </div>
-            <div>
-<pre><code>const stack = {
+
+            <div class="terminal">
+                <div class="terminal-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="terminal-label">JavaScript</span>
+                </div>
+<pre><code class="language-javascript">const stack = {
   frontEnd: ['React', 'Typescript', 'Tailwind'],
   backEnd: ['Node.js', 'Express'],
   database: ['PostgreSQL', 'Prisma'],
@@ -52,68 +65,112 @@
 };</code></pre>
             </div>
         </section>
-        <section>
-            <div>
-                <h2>Habilidades</h2>
-                <ul>
-                    <li>
-                        <img src="assets/icons/html5.svg" alt="">
-                        <p>HTML</p>
-                    </li>
-                
-                    <li>
-                        <img src="assets/icons/css.svg" alt="">
-                        <p>CSS</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/tailwindcss.svg" alt="">
-                        <p>Tailwind CSS</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/javascript.svg" alt="">
-                        <p>JavaScript</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/typescript.svg" alt="">
-                        <p>TypeScript</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/react.svg" alt="">
-                        <p>React</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/nodedotjs.svg" alt="">
-                        <p>Node.js</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/express.svg" alt="">
-                        <p>Express</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/postgresql.svg" alt="">
-                        <p>PostgreSQL</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/prisma.svg" alt="">
-                        <p>Prisma</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/git.svg" alt="">
-                        <p>Git</p>
-                    </li>
-                    <li>
-                        <img src="assets/icons/github.svg" alt="">
-                        <p>GitHub</p>
-                    </li>
-                </ul>
-            </div>
 
+        <section class="skills">
+            <h2>Stack</h2>
+            <ul class="skills-list">
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/html-5-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">HTML5</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/css-3-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">CSS</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/tailwind-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">Tailwind</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/javascript-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">JavaScript</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/typescript-icon-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">TypeScript</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/react-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">React</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/node-js-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">Node.js</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/express-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">Express</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/postgresql-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">PostgreSQL</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/light-prisma-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">Prisma</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/git-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">Git</p>
+                </li>
+                <li class="skill-item">
+                    <div class="skill-icon">
+                        <img src="assets/icons/github-142-svgrepo-com.svg" alt="">
+                    </div>
+                    <p class="skill-name">GitHub</p>
+                </li>
+            </ul>
+        </section>
+        <section class="projects">
+            <h2>Projetos</h2>
+            <article class="project-card">
+                <div class="project-image-wrapper">
+                    <img class="project-image" src="https://placehold.co/450x350" alt="Captura de tela do projeto Pokédex">
+                    <div class="project-overlay">
+                        <h3 class="project-title">Pokédex</h3>
+                        <p class="project-description">Consome a PokeAPI para exibir dados de Pokémon.</p>
+                    </div>
+                
+                    <ul class="project-tags">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/...">GitHub</a>
+                    <a href="https://...">Demo</a>
+                </div>
+            </article>
         </section>
     </main>
 
     <footer>
 
     </footer>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
 </body>
 
 </html>
